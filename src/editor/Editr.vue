@@ -12,6 +12,7 @@
         )
 
     .editr--content(ref="content", contenteditable="!disabled", tabindex="1", :placeholder="placeholder")
+    v-dialog
 
 </template>
 
@@ -41,6 +42,10 @@ import table from "./modules/table.vue";
 import removeFormat from "./modules/removeFormat.js";
 
 import separator from "./modules/separator.js";
+
+import Vue from 'vue';
+import VModal from 'vue-js-modal'
+Vue.use(VModal, { dialog: true })
 
 const modules = [
     bold, italic, underline, separator,

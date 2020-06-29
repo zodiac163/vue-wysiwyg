@@ -1,6 +1,7 @@
-<template lang="pug">
-.wrapper
-  wysiwyg(v-model="msg")
+<template>
+	<div class="wrapper">
+		<wysiwyg v-model="msg" :options="options" />
+	</div>
 </template>
 
 <script>
@@ -45,8 +46,17 @@ export default {
         </tbody>
         </table>
       </p>
-      `
-    }
+      `,
+	  options: {
+		image: {
+			uploadURL: "None",
+			dropzoneOptions: {
+				maxFilesize: 1
+			}
+		},
+		locale: 'en'
+      }
+	}
   }
 }
 </script>

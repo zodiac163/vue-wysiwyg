@@ -4,6 +4,7 @@ import english from "./english";
 import portuguese from "./portuguese";
 import italian from "./italian";
 import spanish from "./spanish";
+import german from "./german";
 
 export default {
     dutch,
